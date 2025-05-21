@@ -55,11 +55,13 @@ if "%SS:~0,1%" equ " " set "SS=0%SS:~1%"
 
 set "filename=build-%DD%.%MM%.%YY%-%HH%:%MI%"
 
-echo "%filename%"
+echo Producing build: %filename%
 
 if "%1" == "server" (
     echo Building server...
-    .\ACWServer\make.bat
+    cd ACWServer
+    .\make.bat
+    cd ..
     echo Packaging server...
     copy ".\libraries\" ".\builds\server\%filename%\"
     move ".\ACWServer\ACW.exe" ".\builds\server\%filename%\ACW-server.exe"
@@ -67,11 +69,11 @@ if "%1" == "server" (
 )
 if "%1" == "client" (
     echo Building client...
-    .\ACWClient\make.bat
+    cd ACWClient
+    .\make.bat
+    cd ..
     echo Packaging client...
     copy ".\libraries\" ".\builds\client\%filename%\"
     move ".\ACWClient\ACW.exe" ".\builds\client\%filename%\ACW-client.exe"
     echo Done! Sucessful build and package!
 )
-
-pause

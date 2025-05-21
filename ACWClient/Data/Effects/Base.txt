@@ -1,0 +1,7 @@
+4
+gunfire
+heal
+explosion
+paradrop
+
+#soundname

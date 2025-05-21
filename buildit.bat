@@ -63,6 +63,7 @@ if "%1" == "server" (
     .\make.bat
     cd ..
     echo Packaging server...
+    mkdir ".\builds\server\%filename%"
     copy ".\libraries\" ".\builds\server\%filename%\"
     move ".\ACWServer\ACW.exe" ".\builds\server\%filename%\ACW-server.exe"
     echo Done! Sucessful build and package!
@@ -73,6 +74,7 @@ if "%1" == "client" (
     .\make.bat
     cd ..
     echo Packaging client...
+    mkdir ".\builds\client\%filename%"
     copy ".\libraries\" ".\builds\client\%filename%\"
     move ".\ACWClient\ACW.exe" ".\builds\client\%filename%\ACW-client.exe"
     echo Done! Sucessful build and package!

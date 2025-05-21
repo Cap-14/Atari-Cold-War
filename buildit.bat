@@ -30,7 +30,7 @@ else if [%1 == client] (
     echo Building client...
     .\ACWClient\make.bat
     echo Packaging client...
-    copy .\libraries\ .\builds\server\%filename%\
+    copy .\libraries\ .\builds\client\%filename%\
     move .\ACWClient\ACW.exe .\builds\client\%filename%\ACW-client.exe
     echo Done! Sucessful build and package!
 )

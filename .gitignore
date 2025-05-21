@@ -1,0 +1,5 @@
+*/*.exe
+*/*.o
+*/.vscode
+builds/client/*
+builds/server/*

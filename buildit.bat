@@ -18,7 +18,7 @@ if "%SS:~0,1%" set "SS=0%SS:~1%"
 
 set "filename=build-%DD%%MM%%YY%-%HH%%MI%%SS%.txt"
 
-if ["%~1" == "server"] (
+if "%1" == "server" (
     echo Building server...
     .\ACWServer\make.bat
     echo Packaging server...
@@ -26,7 +26,7 @@ if ["%~1" == "server"] (
     move .\ACWServer\ACW.exe .\builds\server\%filename%\ACW-server.exe
     echo Done! Sucessful build and package!
 )
-else if ["%~1" == "client"] (
+if "%1" == "client" (
     echo Building client...
     .\ACWClient\make.bat
     echo Packaging client...

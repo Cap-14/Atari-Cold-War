@@ -53,7 +53,7 @@ if "%HH:~0,1%" equ " " set "HH=0%HH:~1%"
 if "%MI:~0,1%" equ " " set "MI=0%MI:~1%"
 if "%SS:~0,1%" equ " " set "SS=0%SS:~1%"
 
-set "filename=build-%DD%.%MM%.%YY%-%HH%:%MI%"
+set "filename=build-%DD%.%MM%.%YY%-%HH%.%MI%"
 
 echo Producing build: %filename%
 

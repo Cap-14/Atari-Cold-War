@@ -22,16 +22,16 @@ if "%1" == "server" (
     echo Building server...
     .\ACWServer\make.bat
     echo Packaging server...
-    copy .\libraries\ .\builds\server\%filename%\
-    move .\ACWServer\ACW.exe .\builds\server\%filename%\ACW-server.exe
+    copy ".\libraries\" ".\builds\server\%filename%\"
+    move ".\ACWServer\ACW.exe" ".\builds\server\%filename%\ACW-server.exe"
     echo Done! Sucessful build and package!
 )
 if "%1" == "client" (
     echo Building client...
     .\ACWClient\make.bat
     echo Packaging client...
-    copy .\libraries\ .\builds\client\%filename%\
-    move .\ACWClient\ACW.exe .\builds\client\%filename%\ACW-client.exe
+    copy ".\libraries\" ".\builds\client\%filename%\"
+    move ".\ACWClient\ACW.exe" ".\builds\client\%filename%\ACW-client.exe"
     echo Done! Sucessful build and package!
 )
 
